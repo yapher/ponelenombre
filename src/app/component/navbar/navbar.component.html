@@ -1,0 +1,75 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Login <span class="text-danger">Redes Sociales</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+  
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="[ '/']" >Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+  
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" *ngIf='!isLogin'>
+            <a class="nav-link" href="#" [routerLink]="[ '/login']" >Login</a>
+          </li>
+          <li class="nav-item"  *ngIf='!isLogin'>
+            <a class="nav-link" href="#"  [routerLink]="[ '/register']" >Registrarse</a>
+          </li>
+          <li class="nav-item" *ngIf='isLogin'>
+            <a class="nav-link" href="#" (click)='onClikLogout()'>Salir</a>
+          </li>
+          <li class="nav-item" *ngIf='isLogin'>
+            <a class="nav-link">{{nombreUsuario}}</a>
+          </li>
+          <li class="nav-item" *ngIf='isLogin'>
+            <img src="{{fotoUsuario}}" class='rounded-circle'>
+            <span class='badge pill badge-secondary'>{{emailUsuario}}</span>
+          </li>
+        </ul>
+      
+    </div>
+  </nav> -->
+
+
+<div class="content">
+  <div class="grid">
+    <figure class="effect-kira">
+      <img class="logo-icon" src="assets/img/nav.png" alt="img17" />
+      <img class="logo-icon2" src="assets/img/nav-nada.png" alt="img17" />
+      <figcaption>
+        <!-- <h2>Ponele <span>Nombre</span></h2> -->
+        <h2>.</h2>
+        <div id="p1" class="row">
+          <div class="col-md-9">
+            <a href="#" class="ml-1">
+              <i class=" fa fa-4x fa-home"></i>
+              <span class='badge pill badge-info'>Home</span>
+            </a>
+          </div>
+
+          <a href="#" class="ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
+            <i class=" fa fa-4x fa-user"></i>
+            <span class='badge pill badge-info'>Login</span>
+          </a>
+          <a href="#" class="ml-3" *ngIf='isLogin'>
+            <img src="{{fotoUsuario}}" class='rounded-circle'>
+            <span class='badge pill badge-info'>{{emailUsuario}}</span>
+          </a>
+          <a href="#" class="ml-3" *ngIf='isLogin' (click)='onClikLogout()'>
+            <i class=" fa fa-4x fa-expeditedssl"></i>
+            <span class='badge pill badge-info'>Salir</span>
+          </a>
+          <a href="#" class="ml-3" *ngIf='!isLogin' [routerLink]="[ '/register']">
+            <i class="fa fa-4x fa-users"></i>
+            <span class='badge pill badge-info'>Registrarse</span>
+          </a>
+
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>

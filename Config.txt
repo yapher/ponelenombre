@@ -1,0 +1,57 @@
+--------***********  CREAMOS LA APLICACION DE ANGULAR 6  ***********------------
+
+----genera proyecto con routing-----
+
+ng new PoneleNombreV2 --routing
+cd  PoneleNombreV2
+
+--Instalación de dependencias-----
+npm i --save bootstrap popper.js jquery font-awesome bootswatch
+npm i --save firebase angularfire2
+npm i --save rxjs-compat
+npm i --save angular2-flash-messages
+
+--Componentes---
+ng g c component/homePage --spec false
+ng g c component/navbar --spec false
+ng g c component/registerPage --spec false
+ng g c component/loginPage --spec false
+ng g c component/privadoPage --spec false
+ng g c component/notFoundPage --spec false
+
+---Servicios----
+ng g s services/auth --spec false
+
+---guards----
+ng g guard guards/auth --spec false
+
+--git--
+--cofiruramos github--
+crear repositorio   https://github.com/new
+
+echo "# ponelenombre" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/yapher/ponelenombre.git
+git push -u origin master
+
+--modificamos backup github --
+git status  --ver cambios
+git add .   --Agregamos los cambios
+git commit -am "instalación de dependencias"  -- creamos punto de restauración
+git push   --subimos las modificaciones al servidor de github
+
+---Cofigurar alojamiento web de Firebase-----
+
+npm install -g firebase-tools
+
+firebase login
+
+firebase init
+
+ng build
+
+firebase deploy
+
+Hosting URL: https://login-2e024.firebaseapp.com
