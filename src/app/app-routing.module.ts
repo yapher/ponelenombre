@@ -11,6 +11,8 @@ import { RegisterPageComponent } from './component/register-page/register-page.c
 import { LoginPageComponent } from './component/login-page/login-page.component';
 import { PrivadoPageComponent } from './component/privado-page/privado-page.component';
 import { NotFoundPageComponent } from './component/not-found-page/not-found-page.component';
+import { ProductoComponent } from './component/producto/producto.component';
+import { PromocionesComponent } from './component/promociones/promociones.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'privado', component: PrivadoPageComponent, canActivate: [AuthGuard] },
+  { path: 'producto', component: ProductoComponent },
+  { path: 'promociones', component: PromocionesComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 

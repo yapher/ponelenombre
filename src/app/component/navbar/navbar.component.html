@@ -33,22 +33,50 @@
       
     </div>
   </nav> -->
-
+<!-- <tr>
+  <td>
+    <img src="assets/images/Sitio-web-stickers_05.png" width="4" height="15" alt=""></td>
+  <td colspan="22" rowspan="2">
+    <img src="assets/images/Sitio-web-stickers_06.png" width="1946" height="122" alt=""></td>
+  <td>
+    <img src="assets/images/espacio.gif" width="1" height="15" alt=""></td>
+</tr> -->
 
 <div class="content">
   <div class="grid">
     <figure class="effect-kira">
-      <img class="logo-icon" src="assets/img/nav.png" alt="img17" />
-      <img class="logo-icon2" src="assets/img/nav-nada.png" alt="img17" />
+      <!-- <img class="logo-icon" src="assets/img/nav.png" alt="img17" /> -->
+      <!-- <img class="logo-icon2" src="assets/img/nav-nada.png" alt="img17" /> -->
+      <td colspan="22" rowspan="2">
+
+        <!-- </td> -->
+        <!-- <td colspan="23"> -->
+        <!-- <img src="assets/images/Sitio-web-stickers_03.png" width="1950" height="45" alt=""> -->
+        <img src="assets/images/Sitio-web-stickers_03.png" width="1946" height="300" alt="">
+      </td>
+
+      <!-- <img class="logo-icon2" src="assets/images/espacio.gif"> -->
+
       <figcaption>
         <!-- <h2>Ponele <span>Nombre</span></h2> -->
-        <h2>.</h2>
+        <!-- <h2>.</h2> -->
+        <img src="assets/images/Sitio-web-stickers_06.png" width="1946" height="122" alt="">
         <div id="p1" class="row">
           <div class="col-md-9">
             <a href="#" class="ml-1">
               <i class=" fa fa-4x fa-home"></i>
               <span class='badge pill badge-info'>Home</span>
             </a>
+            <a [routerLink]="[ '/producto']" class="ml-1">
+              <i class=" fa fa-4x fa-product-hunt"></i>
+              <span class='badge pill badge-info'>Productos</span>
+            </a>
+            <a [routerLink]="[ '/promociones']" class="ml-1">
+              <i class=" fa fa-4x fa-gift"></i>
+              <span class='badge pill badge-info'>Promociones</span>
+            </a>
+
+
           </div>
 
           <a href="#" class="ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
