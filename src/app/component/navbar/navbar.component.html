@@ -42,24 +42,20 @@
     <img src="assets/images/espacio.gif" width="1" height="15" alt=""></td>
 </tr> -->
 
-<div class="content">
+<!-- <div class="content">
   <div class="grid">
     <figure class="effect-kira">
-      <!-- <img class="logo-icon" src="assets/img/nav.png" alt="img17" /> -->
-      <!-- <img class="logo-icon2" src="assets/img/nav-nada.png" alt="img17" /> -->
+     
       <td colspan="22" rowspan="2">
 
-        <!-- </td> -->
-        <!-- <td colspan="23"> -->
-        <!-- <img src="assets/images/Sitio-web-stickers_03.png" width="1950" height="45" alt=""> -->
+       
         <img src="assets/images/Sitio-web-stickers_03.png" width="1946" height="300" alt="">
       </td>
 
-      <!-- <img class="logo-icon2" src="assets/images/espacio.gif"> -->
+    
 
       <figcaption>
-        <!-- <h2>Ponele <span>Nombre</span></h2> -->
-        <!-- <h2>.</h2> -->
+      
         <img src="assets/images/Sitio-web-stickers_06.png" width="1946" height="122" alt="">
         <div id="p1" class="row">
           <div class="col-md-9">
@@ -100,4 +96,60 @@
       </figcaption>
     </figure>
   </div>
+</div> -->
+
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded menu">
+    <a class="navbar-brand">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item active">
+          <a class="nav-link ml-1">
+            <i class=" fa fa-3x fa-home"></i>
+            <span class='badge pill badge-info'>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/producto']" class="nav-link ml-1">
+            <i class=" fa fa-3x fa-product-hunt"></i>
+            <span class='badge pill badge-info'>Productos</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="[ '/promociones']" class="nav-link ml-1">
+            <i class=" fa fa-3x fa-gift"></i>
+            <span class='badge pill badge-info'>Promociones</span>
+          </a>
+        </li>
+      </ul>
+      <div class="rounded-circle">
+        <a href="#" class="ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
+          <i class=" fa fa-3x fa-user"></i>
+          <span class='badge pill badge-info'>Login</span>
+        </a>
+        <a href="#" class="ml-3" *ngIf='isLogin'>
+          <img src="{{fotoUsuario}}" class='rounded-circle'>
+          <span class='badge pill badge-info'>{{emailUsuario}}</span>
+        </a>
+        <a href="#" class="ml-3" *ngIf='isLogin' (click)='onClikLogout()'>
+          <i class=" fa fa-3x fa-expeditedssl"></i>
+          <span class='badge pill badge-info'>Salir</span>
+        </a>
+        <a href="#" class="ml-3" *ngIf='!isLogin' [routerLink]="[ '/register']">
+          <i class="fa fa-3x fa-users"></i>
+          <span class='badge pill badge-info'>Registrarse</span>
+        </a>
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 </div>

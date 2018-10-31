@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
 
   <div class="mt-3">
     <a><img src="assets/images/producto/Producto_03.png" alt=""></a>
@@ -12,115 +12,112 @@
 
 
 
-</section>
+</section> -->
 
 <!-- <div [ngStyle]="{'color': color, 'font-size': size +'px', 'font-weight': 'bold'}"> -->
 
 
-<div class="font-effect-fire-animation">This is a font effect!</div>
+<!-- <div class="font-effect-fire-animation">This is a font effect!</div> -->
+<div class="container">
 
-<div class="row">
-  <div class=" border border-danger rounded col-md-5 ml-3">
-    <div class="row">
-      <!-- <input [(ngModel)]="myStyles.color" /> -->
-      <div class="col-md-2">
-        <div class="form-group">
-          <label class="col-md-6" for="">TAMAÑO</label>
-          <div class="row">
-            <div>
-              <button type="button" class="btn btn-lg btn-secoundary rounded" (click)="suma()"><strong>+</strong></button>
-            </div>
-            <div>
-              <button type="button" class="btn btn-lg btn-primary rounded ml-2" (click)="resta()"><strong>-</strong></button>
-              {{size}}
-            </div>
+
+  <div class="row">
+    <div class="border border-success rounded col-md-6 ml-2 mr-2">
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Ingresar el texto</label>
+            <textarea Class="ml-4" type="text" name="texto1" id="texto1" [(ngModel)]='texto1'></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div [ngStyle]="myStyles">
+            <img [ngStyle]="{'background-color' : styleBackgroundColor}" src="assets/images/producto/Producto_10.png"
+              alt="">
+            {{texto1}}
           </div>
         </div>
       </div>
 
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="">MODELOS DE LETRAS</label>
-          <select class="form-control" id="nivel5" placeholder="niveles" required [(ngModel)]='familyFont' (change)='setFontFamily()'
-            [ngModelOptions]="{standalone: true}" #nivel5="ngModel">
-            <option *ngFor="let item of fontFamylist" [ngValue]='item' [ngStyle]="{'font-family': item,'font-size': '20px','font-style': styleFont, 'font-weight': 'bold'}">
-              {{item}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="">COLOR DE FONDO</label>
-          <select class="form-control" id="nivel0" placeholder="niveles" required [(ngModel)]='styleBackgroundColor'
-            (change)='setBackgroundColor()' [ngModelOptions]="{standalone: true}" #nivel0="ngModel">
-            <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
-              {{item}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="">COLOR DE LETRAS</label>
-          <select class="form-control" id="nivel1" placeholder="niveles" required [(ngModel)]='myStyles.color'
-            [ngModelOptions]="{standalone: true}" #nivel1="ngModel">
-            <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor,'color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
-              {{item}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="">ESTILO DE LETRAS</label>
-          <select class="form-control" id="nivel2" placeholder="niveles" required [(ngModel)]='styleWeight' (change)='setStyles()'
-            [ngModelOptions]="{standalone: true}" #nivel2="ngModel">
-            <option *ngFor="let item of fontWeight" [ngValue]='item'> {{item}}</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="">FORMA DE LETRAS</label>
-          <select class="form-control" id="nivel4" placeholder="niveles" required [(ngModel)]='styleFont' (change)='setStylesFont()'
-            [ngModelOptions]="{standalone: true}" #nivel4="ngModel">
-            <option *ngFor="let item of styles" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor, 'font-size': '20px','font-style': item, 'font-weight': 'bold'}">
-              {{item}}</option>
-          </select>
-        </div>
-      </div>
     </div>
-  </div>
+    <div class=" border border-danger rounded col-md-5 mt-2 ml-2 mr-2">
+      <div class="row">
+        <!-- <input [(ngModel)]="myStyles.color" /> -->
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="col-md-6" for="">TAMAÑO</label>
+            <div class="row">
+              <div>
+                <button type="button" class="btn btn-lg btn-secoundary rounded" (click)="suma()"><strong>+</strong></button>
+              </div>
+              <div>
+                <button type="button" class="btn btn-lg btn-primary rounded ml-2" (click)="resta()"><strong>-</strong></button>
+                {{size}}
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <div class="border border-success rounded col-md-6 ml-3">
-    <div class="row mt-3">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="">Ingresar el texto</label>
-          <textarea Class="ml-4" type="text" name="texto1" id="texto1" [(ngModel)]='texto1'></textarea>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="">MODELOS DE LETRAS</label>
+            <select class="form-control" id="nivel5" placeholder="niveles" required [(ngModel)]='familyFont' (change)='setFontFamily()'
+              [ngModelOptions]="{standalone: true}" #nivel5="ngModel">
+              <option *ngFor="let item of fontFamylist" [ngValue]='item' [ngStyle]="{'font-family': item,'font-size': '20px','font-style': styleFont, 'font-weight': 'bold'}">
+                {{item}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="">COLOR DE FONDO</label>
+            <select class="form-control" id="nivel0" placeholder="niveles" required [(ngModel)]='styleBackgroundColor'
+              (change)='setBackgroundColor()' [ngModelOptions]="{standalone: true}" #nivel0="ngModel">
+              <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
+                {{item}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="">COLOR DE LETRAS</label>
+            <select class="form-control" id="nivel1" placeholder="niveles" required [(ngModel)]='myStyles.color'
+              [ngModelOptions]="{standalone: true}" #nivel1="ngModel">
+              <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor,'color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
+                {{item}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="">ESTILO DE LETRAS</label>
+            <select class="form-control" id="nivel2" placeholder="niveles" required [(ngModel)]='styleWeight' (change)='setStyles()'
+              [ngModelOptions]="{standalone: true}" #nivel2="ngModel">
+              <option *ngFor="let item of fontWeight" [ngValue]='item'> {{item}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="">FORMA DE LETRAS</label>
+            <select class="form-control" id="nivel4" placeholder="niveles" required [(ngModel)]='styleFont' (change)='setStylesFont()'
+              [ngModelOptions]="{standalone: true}" #nivel4="ngModel">
+              <option *ngFor="let item of styles" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor, 'font-size': '20px','font-style': item, 'font-weight': 'bold'}">
+                {{item}}</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <div [ngStyle]="myStyles">
-          <img [ngStyle]="{'background-color' : styleBackgroundColor}" src="assets/images/producto/Producto_10.png" alt="">
-          {{texto1}}
-        </div>
-      </div>
-      <select title="Select your surfboard" class="selectpicker">
-        <option>Select...bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</option>
-        <option value="100" style="background-image:url(assets/images/producto/Producto_10.png);"></option>
-        <option><a href="../../../assets/images/producto/Producto_10.png"></a></option>
-        <option data-thumbnail="images/icon-firefox.png">Firefox</option>
-        <option data-thumbnail="images/icon-ie.png">IE</option>
-        <option data-thumbnail="images/icon-opera.png">Opera</option>
-        <option data-thumbnail="images/icon-safari.png">Safari</option>
-      </select>
     </div>
 
+
   </div>
+
 </div>
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="row">
       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -243,4 +240,4 @@
   <h3>Z1 - (id=1) - row plain gallery layout (limit 2) and custom size</h3>
   <br>
   <ks-modal-gallery [id]="1" [modalImages]="images" [plainGalleryConfig]="plainGalleryGrid"></ks-modal-gallery>
-</section>
+</section> -->

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* body {
+  background-color: #957dad;
+} */
+body {
+  background: #ad5389;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3c1053, #ad5389);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.menu {
+  background-color: rgba(13, 97, 13, 0.466) !important;
+
+}

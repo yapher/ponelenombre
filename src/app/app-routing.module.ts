@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'privado', component: PrivadoPageComponent, canActivate: [AuthGuard] },
-  { path: 'producto', component: ProductoComponent },
+  { path: 'producto', component: ProductoComponent, canActivate: [AuthGuard] },
   { path: 'promociones', component: PromocionesComponent },
   { path: '**', component: NotFoundPageComponent }
 ];

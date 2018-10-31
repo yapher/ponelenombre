@@ -1,30 +1,35 @@
-<div class='row mt-5'>
-  <div class='col-md-6 mx-auto'>
-    <div class='card'>
-      <h1 class='text-center'>Login</h1>
-      <div class='card-body'>
-        <form (submit)='onSubmintLogin()'>
-          <div class='form-group'>
-            <label for="email">email</label>
-            <input type="email" name="email" id="email" [(ngModel)]='email' class="form-control">
-          </div>
-          <div class='form-group'>
-            <label for="password">password</label>
-            <input type="password" name="password" id="password" [(ngModel)]='password' class="form-control">
-          </div>
-          <input type="submit" value="Enviar" class="btn btn-primary btn-block btn-lg">
-        </form>
+<div class="container ">
+  <div class='row mt-5'>
+    <div class='col-md-6 mx-auto'>
+      <div class='card backLogin'>
+        <h1 class='text-center'>Login</h1>
+        <div class='card-body'>
+          <form (submit)='onSubmintLogin()'>
+            <div class='form-group'>
+              <i class=" fa fa-2x fa-envelope"></i>
+              <label class="ml-2" for="email">email</label>
+              <input type="email" name="email" id="email" [(ngModel)]='email' class="form-control">
+            </div>
+            <div class='form-group'>
+              <i class=" fa fa-2x fa-key"></i>
+              <label class="ml-2" for="password">password</label>
+              <input type="password" name="password" id="password" [(ngModel)]='password' class="form-control">
+            </div>
+            <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg">
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class='row'>
-  <div class='col-md-6 mx-auto mt-2'>
-    <div class='card'>
-      <div class='card-body d-flex justify-content-around'>
-        <button class="btn btn-lg btn-facebook" (click)='onClikFacebookLogin()'><i class="fa fa-facebook"></i> Facebook</button>
-        <button class="btn btn-lg btn-google" (click)='onClikGoogleLogin()'><i class="fa fa-google-plus"></i> Google</button>
-        <button class="btn btn-lg btn-twitter" (click)='onClikTwitterLogin()'><i class="fa fa-twitter"></i> Twitter</button>
+  <div class='row'>
+    <div class='col-md-6 mx-auto mt-2'>
+      <div class='card backLogin'>
+        <div class='card-body d-flex justify-content-around'>
+          <button class="btn btn-lg btn-facebook" (click)='onClikFacebookLogin()'><i class="fa fa-facebook"></i>
+            Facebook</button>
+          <button class="btn btn-lg btn-google" (click)='onClikGoogleLogin()'><i class="fa fa-google-plus"></i> Google</button>
+          <button class="btn btn-lg btn-twitter" (click)='onClikTwitterLogin()'><i class="fa fa-twitter"></i> Twitter</button>
+        </div>
       </div>
     </div>
   </div>

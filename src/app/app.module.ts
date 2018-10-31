@@ -41,6 +41,7 @@ import { NotFoundPageComponent } from './component/not-found-page/not-found-page
 import { ProductoComponent } from './component/producto/producto.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { PromocionesComponent } from './component/promociones/promociones.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PromocionesComponent } from './component/promociones/promociones.compon
     NotFoundPageComponent,
     ProductoComponent,
     FooterComponent,
-    PromocionesComponent
+    PromocionesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
