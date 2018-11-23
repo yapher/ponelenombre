@@ -22,7 +22,7 @@
 
 
   <div class="row">
-    <div class="border border-success rounded col-md-6 ml-2 mr-2">
+    <div class="border border-success rounded col-12 ml-2 mr-2">
       <div class="row mt-3">
         <div class="col-md-6">
           <div class="form-group">
@@ -31,18 +31,18 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-3 ">
         <div class="col-md-6">
-          <div [ngStyle]="myStyles">
-            <img [ngStyle]="{'background-color' : styleBackgroundColor}" src="assets/images/producto/Producto_10.png"
+          <div class="border rounded" [ngStyle]="myStyles">
+            <img [ngStyle]="{'background-color' : styleBackgroundColor, 'height': '130px'}" src="assets/images/producto/Iconos-13.png"
               alt="">
-            {{texto1}}
+            <a>{{texto1}}</a>
           </div>
         </div>
       </div>
 
     </div>
-    <div class=" border border-danger rounded col-md-5 mt-2 ml-2 mr-2">
+    <div class=" border border-danger rounded col-12 mt-2 ml-2 mr-2">
       <div class="row">
         <!-- <input [(ngModel)]="myStyles.color" /> -->
         <div class="col-md-2">

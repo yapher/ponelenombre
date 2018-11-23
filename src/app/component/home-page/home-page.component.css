@@ -1,13 +1,7 @@
 .servicios {
-  display: inline-block;
-  width: 20em;
-  height: 20em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  width: 10em;
+  height: 10em;
+
 }
 
 .servicios:hover {
@@ -34,6 +28,21 @@
   border-color: rgb(152, 173, 173);
   border-radius: 1em;
 
+}
+
+
+@media (max-width: 440px) {
+  .servicios {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
 }
 
 /* .productos:hover {

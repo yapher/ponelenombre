@@ -1,155 +1,64 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Login <span class="text-danger">Redes Sociales</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarColor01">
-  
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" [routerLink]="[ '/']" >Home <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-  
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" *ngIf='!isLogin'>
-            <a class="nav-link" href="#" [routerLink]="[ '/login']" >Login</a>
-          </li>
-          <li class="nav-item"  *ngIf='!isLogin'>
-            <a class="nav-link" href="#"  [routerLink]="[ '/register']" >Registrarse</a>
-          </li>
-          <li class="nav-item" *ngIf='isLogin'>
-            <a class="nav-link" href="#" (click)='onClikLogout()'>Salir</a>
-          </li>
-          <li class="nav-item" *ngIf='isLogin'>
-            <a class="nav-link">{{nombreUsuario}}</a>
-          </li>
-          <li class="nav-item" *ngIf='isLogin'>
-            <img src="{{fotoUsuario}}" class='rounded-circle'>
-            <span class='badge pill badge-secondary'>{{emailUsuario}}</span>
-          </li>
-        </ul>
-      
-    </div>
-  </nav> -->
-<!-- <tr>
-  <td>
-    <img src="assets/images/Sitio-web-stickers_05.png" width="4" height="15" alt=""></td>
-  <td colspan="22" rowspan="2">
-    <img src="assets/images/Sitio-web-stickers_06.png" width="1946" height="122" alt=""></td>
-  <td>
-    <img src="assets/images/espacio.gif" width="1" height="15" alt=""></td>
-</tr> -->
+<!-- <div class=" container-fluid "> -->
+<nav class="shadow-lg navbar navbar-expand-lg navbar-dark bg-dark menu bordeBisel d-flex flex-nowrap ">
 
-<!-- <div class="content">
-  <div class="grid">
-    <figure class="effect-kira">
-     
-      <td colspan="22" rowspan="2">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-       
-        <img src="assets/images/Sitio-web-stickers_03.png" width="1946" height="300" alt="">
-      </td>
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav d-flex">
+      <li class=" nav-item mr-auto">
+        <a [routerLink]="[ '/']" class=" nav-link ml-1">
+          <i class=" fa fa-3x fa-home"></i>
+          <span class='badge pill badge-info'>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="[ '/producto']" class="nav-link ml-1">
+          <i class=" fa fa-3x fa-product-hunt"></i>
+          <span class='badge pill badge-info'>Productos</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="[ '/promociones']" class="nav-link ml-1">
+          <i class=" fa fa-3x fa-gift"></i>
+          <span class='badge pill badge-info'>Promociones</span>
+        </a>
+      </li>
+    </ul>
 
-    
-
-      <figcaption>
-      
-        <img src="assets/images/Sitio-web-stickers_06.png" width="1946" height="122" alt="">
-        <div id="p1" class="row">
-          <div class="col-md-9">
-            <a href="#" class="ml-1">
-              <i class=" fa fa-4x fa-home"></i>
-              <span class='badge pill badge-info'>Home</span>
-            </a>
-            <a [routerLink]="[ '/producto']" class="ml-1">
-              <i class=" fa fa-4x fa-product-hunt"></i>
-              <span class='badge pill badge-info'>Productos</span>
-            </a>
-            <a [routerLink]="[ '/promociones']" class="ml-1">
-              <i class=" fa fa-4x fa-gift"></i>
-              <span class='badge pill badge-info'>Promociones</span>
-            </a>
-
-
-          </div>
-
-          <a href="#" class="ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
-            <i class=" fa fa-4x fa-user"></i>
-            <span class='badge pill badge-info'>Login</span>
-          </a>
-          <a href="#" class="ml-3" *ngIf='isLogin'>
-            <img src="{{fotoUsuario}}" class='rounded-circle'>
-            <span class='badge pill badge-info'>{{emailUsuario}}</span>
-          </a>
-          <a href="#" class="ml-3" *ngIf='isLogin' (click)='onClikLogout()'>
-            <i class=" fa fa-4x fa-expeditedssl"></i>
-            <span class='badge pill badge-info'>Salir</span>
-          </a>
-          <a href="#" class="ml-3" *ngIf='!isLogin' [routerLink]="[ '/register']">
-            <i class="fa fa-4x fa-users"></i>
-            <span class='badge pill badge-info'>Registrarse</span>
-          </a>
-
-        </div>
-      </figcaption>
-    </figure>
   </div>
-</div> -->
-
-
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded menu">
-    <a class="navbar-brand">Menu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto ">
-        <li class="nav-item active">
-          <a class="nav-link ml-1">
-            <i class=" fa fa-3x fa-home"></i>
-            <span class='badge pill badge-info'>Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="[ '/producto']" class="nav-link ml-1">
-            <i class=" fa fa-3x fa-product-hunt"></i>
-            <span class='badge pill badge-info'>Productos</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="[ '/promociones']" class="nav-link ml-1">
-            <i class=" fa fa-3x fa-gift"></i>
-            <span class='badge pill badge-info'>Promociones</span>
-          </a>
-        </li>
-      </ul>
-      <div class="rounded-circle">
-        <a href="#" class="ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
-          <i class=" fa fa-3x fa-user"></i>
-          <span class='badge pill badge-info'>Login</span>
-        </a>
-        <a href="#" class="ml-3" *ngIf='isLogin'>
-          <img src="{{fotoUsuario}}" class='rounded-circle'>
-          <span class='badge pill badge-info'>{{emailUsuario}}</span>
-        </a>
-        <a href="#" class="ml-3" *ngIf='isLogin' (click)='onClikLogout()'>
-          <i class=" fa fa-3x fa-expeditedssl"></i>
-          <span class='badge pill badge-info'>Salir</span>
-        </a>
-        <a href="#" class="ml-3" *ngIf='!isLogin' [routerLink]="[ '/register']">
-          <i class="fa fa-3x fa-users"></i>
-          <span class='badge pill badge-info'>Registrarse</span>
-        </a>
-      </div>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <div class="d-flex ml-auto">
+    <div class="p-2"> <a href="#" class="nav-link ml-1" *ngIf='!isLogin' [routerLink]="[ '/login']">
+        <i class=" fa fa-3x fa-user"></i>
+        <span class='badge pill badge-info'>Login</span>
+      </a>
+    </div>
+    <div class="p-1">
+      <a href="#" class="nav-link ml-1" *ngIf='!isLogin' [routerLink]="[ '/register']">
+        <i class="fa fa-3x fa-users"></i>
+        <span class='badge pill badge-info'>Registrarse</span>
+      </a>
+    </div>
+    <div class="p-1">
+      <a href="#" class="nav-link ml-1" *ngIf='isLogin'>
+        <img src="{{fotoUsuario}}" class='rounded-circle'>
+        <span class='badge pill badge-info textButton ml-2'>{{emailUsuario}}</span>
+      </a>
+    </div>
+    <div class="p-1">
+      <a href="#" class="nav-link ml-1" *ngIf='isLogin' (click)='onClikLogout()'>
+        <i class=" fa fa-3x fa-expeditedssl"></i>
+        <span class='badge pill badge-info'>Salir</span>
+      </a>
+    </div>
+    <div class="p-1 desaparece">
+      <form class="form-inline p-2">
+        <input class="form-control p-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success p-2 m-2" type="submit">Search</button>
       </form>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
+<!-- </div> -->

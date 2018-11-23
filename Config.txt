@@ -107,4 +107,4 @@ entrar en la carpeta dist y copiar todo lo de la carpeta PoneleNombreV2 a la dis
 
 firebase deploy
 
-Hosting URL: https://login-2e024.firebaseapp.com
+Hosting URL: https://ponelenombre-518af.firebaseapp.com

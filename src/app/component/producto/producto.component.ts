@@ -70,22 +70,11 @@ export class ProductoComponent implements OnInit {
   fontFamylist: any[] = [
     'Krub', 'Open Sans', 'Roboto', 'Mali', 'Lato', 'Montserrat', 'Niramit', 'Roboto Condensed',
     'Source Sans Pro', 'Oswald', 'Chakra Petch', 'Raleway', 'Slabo 27px', 'PT Sans', 'K2D',
-    'Merriweather', 'Roboto Slab', 'Noto Sans',
-    'Open Sans Condensed',
-    'Ubuntu',
-    'Charmonman',
-    'Poppins',
-    'Playfair Display',
-    'Roboto Mono',
+    'Merriweather', 'Roboto Slab', 'Noto Sans', 'Open Sans Condensed', 'Ubuntu', 'Charmonman', 'Poppins', 'Playfair Display', 'Roboto Mono',
     'Muli',
     'Rosario',
     'PT Serif',
-    'Lora',
-    'Titillium Web',
-    'Arimo',
-    'PT Sans Narrow',
-    'Nunito',
-    'Mukta',
+    'Lora', 'Titillium Web', 'Arimo', 'PT Sans Narrow', 'Nunito', 'Mukta',
     'Inconsolata',
     'Noto Serif',
     'Fira Sans',
@@ -789,7 +778,7 @@ export class ProductoComponent implements OnInit {
     // this.colorFont = this.colores[1];
     this.myStyles.color = this.colores[60];
     this.styleWeight = this.fontWeight[1];
-    this.styleBackgroundColor = this.colores[0];
+    // this.styleBackgroundColor = this.colores[0];
     this.styleFont = this.styles[0];
     this.familyFont = this.fontFamylist[0];
     this.size = 50;
