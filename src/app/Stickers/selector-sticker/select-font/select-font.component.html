@@ -1,0 +1,56 @@
+<div class=" border border-danger rounded col-12 mt-2 ml-2 mr-2">
+  <div class="row m-1 ">
+    <div class="col-md-6">
+      <div class="row align-items-center bordeRonded" [ngStyle]="{'background-color': styleBackgroundColor}">
+        <img class="col-5" src="{{img}}">
+        <div class="col-7">
+          <div class="row ">
+            <div id="sidebar" class="col-12 text-center bordeRonded" [ngStyle]="{'font-family': fontFamily,'font-size': fontSizeTitulo + 'px','font-style': fontStyle, 'font-weight': fontWeight, 'color': colorLetra}"><span>{{titulo}}</span></div>
+            <div id="sidebar" class="col-12 text-center bordeRonded" [ngStyle]="{'font-family': fontFamily,'font-size': fontSizeBody + 'px','font-style': fontStyle, 'font-weight': fontWeight, 'color': colorLetra}"><span>{{cuerpo}}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-2">
+      <div class="row ">
+        <input (keyup)="onKey('myStyles')" Class="col-12 input_text bordeRonded" type="text" [(ngModel)]='titulo'
+          placeholder="Ingresar el texto">
+        <input (keyup)="onKey('myStyles2')" Class="col-12 input_text bordeRonded mt-2" type="text" [(ngModel)]='cuerpo'
+          placeholder="Ingresar el texto">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="">MODELOS DE LETRAS</label>
+        <select class="form-control" id="nivel5" placeholder="niveles" required [(ngModel)]='fontFamily2' (change)='setStyles(fontFamily2)'
+          [ngModelOptions]="{standalone: true}" #nivel5="ngModel">
+          <option *ngFor="let item of listStyles" [ngValue]='item' [ngStyle]="{'font-family': item.fontFamily,'font-size': '20px','font-style': item.fontStyle, 'font-weight': item.fontWeight, 'background-color': styleBackgroundColor,'color': colorLetra }">
+            {{item.fontFamily}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="">COLOR DE FONDO</label>
+        <select class="form-control" id="nivel0" placeholder="niveles" required [(ngModel)]='styleBackgroundColor'
+          [ngModelOptions]="{standalone: true}" #nivel0="ngModel">
+          <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
+            {{item}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="">COLOR DE LETRAS</label>
+        <select class="form-control" id="nivel1" placeholder="niveles" required [(ngModel)]='colorLetra'
+          [ngModelOptions]="{standalone: true}" #nivel1="ngModel">
+          <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor,'color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
+            {{item}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

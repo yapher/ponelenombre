@@ -19,103 +19,17 @@
 
 <!-- <div class="font-effect-fire-animation">This is a font effect!</div> -->
 <div class="container">
-
-
-  <div class="row">
-    <div class="border border-success rounded col-12 ml-2 mr-2">
-      <div class="row mt-3">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="">Ingresar el texto</label>
-            <textarea Class="ml-4" type="text" name="texto1" id="texto1" [(ngModel)]='texto1'></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-3 ">
-        <div class="col-md-6">
-          <div class="border rounded" [ngStyle]="myStyles">
-            <img [ngStyle]="{'background-color' : styleBackgroundColor, 'height': '130px'}" src="assets/images/producto/Iconos-13.png"
-              alt="">
-            <a>{{texto1}}</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class=" border border-danger rounded col-12 mt-2 ml-2 mr-2">
-      <div class="row">
-        <!-- <input [(ngModel)]="myStyles.color" /> -->
-        <div class="col-md-2">
-          <div class="form-group">
-            <label class="col-md-6" for="">TAMAÑO</label>
-            <div class="row">
-              <div>
-                <button type="button" class="btn btn-lg btn-secoundary rounded" (click)="suma()"><strong>+</strong></button>
-              </div>
-              <div>
-                <button type="button" class="btn btn-lg btn-primary rounded ml-2" (click)="resta()"><strong>-</strong></button>
-                {{size}}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="">MODELOS DE LETRAS</label>
-            <select class="form-control" id="nivel5" placeholder="niveles" required [(ngModel)]='familyFont' (change)='setFontFamily()'
-              [ngModelOptions]="{standalone: true}" #nivel5="ngModel">
-              <option *ngFor="let item of fontFamylist" [ngValue]='item' [ngStyle]="{'font-family': item,'font-size': '20px','font-style': styleFont, 'font-weight': 'bold'}">
-                {{item}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="">COLOR DE FONDO</label>
-            <select class="form-control" id="nivel0" placeholder="niveles" required [(ngModel)]='styleBackgroundColor'
-              (change)='setBackgroundColor()' [ngModelOptions]="{standalone: true}" #nivel0="ngModel">
-              <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
-                {{item}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="">COLOR DE LETRAS</label>
-            <select class="form-control" id="nivel1" placeholder="niveles" required [(ngModel)]='myStyles.color'
-              [ngModelOptions]="{standalone: true}" #nivel1="ngModel">
-              <option *ngFor="let item of colores" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor,'color' : item, 'font-size': '20px', 'font-weight': 'bold'}">
-                {{item}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="">ESTILO DE LETRAS</label>
-            <select class="form-control" id="nivel2" placeholder="niveles" required [(ngModel)]='styleWeight' (change)='setStyles()'
-              [ngModelOptions]="{standalone: true}" #nivel2="ngModel">
-              <option *ngFor="let item of fontWeight" [ngValue]='item'> {{item}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="">FORMA DE LETRAS</label>
-            <select class="form-control" id="nivel4" placeholder="niveles" required [(ngModel)]='styleFont' (change)='setStylesFont()'
-              [ngModelOptions]="{standalone: true}" #nivel4="ngModel">
-              <option *ngFor="let item of styles" [ngValue]='item' [ngStyle]="{'background-color' : styleBackgroundColor, 'font-size': '20px','font-style': item, 'font-weight': 'bold'}">
-                {{item}}</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
+  <app-select-image></app-select-image>
 
 </div>
+<!-- <ng-template #popTemplate>
+  <app-select-image></app-select-image>
+</ng-template>
+<button type="button" class="btn btn-warning" [popover]="popTemplate" popoverTitle="Template ref content inside"
+  placement="bottom">
+  TemplateRef binding
+</button> -->
+
 
 <!-- <div class="container">
   <div class="row">

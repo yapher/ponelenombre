@@ -1,0 +1,9 @@
+.input_text {
+  width: 347px;
+  height: 60px;
+  /* text-align: center; */
+}
+
+.bordeRonded {
+  border-radius: 15px;
+}

@@ -1,0 +1,73 @@
+<div class=" d-flex justify-content-center">
+  <div class="ml-2 mr-2">
+
+    <!-- <div class="dropdown-list" id="form1"> -->
+    <div class="row m-3 border bordeRonded bg-white">
+      <div class="col-4">
+        <div class="sticker-icon-preview"><img class="logo" src="{{img}}"></div>
+
+      </div>
+      <div class="col-6" #pop2="bs-popover" [popover]="popTemplate" [popoverTitle]="'Template ref content inside'"
+        placement="bottom">
+        <!-- <div class=" ml-auto"> -->
+        <div>
+          <span class="fa fa-angle-down fa-2x"></span>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- </div> -->
+
+
+
+
+  </div>
+
+
+
+</div>
+<app-select-font [img]="img"></app-select-font>
+
+<!-- <ng-template #popTitulo>hola</ng-template> -->
+<ng-template #popTemplate>
+  <div class="c-close" (click)="pop2.hide()">close</div>
+  <div class="dropdown-list__subTitle">
+    <span class="icon_category" selected="selected"><a onclick="updateIconsLists('medium','Adventure')">Aventura</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Allergy')">Alergia</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Animals')">Animales</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','BadBirds')">BadBirds</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','BlackWhite')">Blanco-Negro</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Emojis')">Emoticono</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Food')">Comida</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Halloween18')">Halloween18</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Hobby')">Hobby</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Lovable')">Amable</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Monster')">Monstruo</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','SummerEdition')">EdiciónEstival</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Superheroes')">Superhéroes</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','Trending')">EstarDeModa</a></span>
+    <span class="icon_category"><a onclick="updateIconsLists('medium','vehicles')">vehículo</a></span>
+  </div>
+
+
+  <div *ngFor="let item of iconos" class="dropdown-list__subDetail icon-Adventure" style="display: block;">
+    <li>
+      <a (click)="setImagen(item); pop2.hide()" alt="ningún logotipo">
+        <img style="max-width: 100%;" class="img-fluid illust" [src]='item'>
+      </a>
+    </li>
+  </div>
+
+
+</ng-template>
+
+<ng-template #popTemplate2>
+  <button type="button" name="" id="" class="btn btn-info btn-lg btn-block">hola</button>
+</ng-template>

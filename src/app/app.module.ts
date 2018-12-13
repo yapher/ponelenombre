@@ -13,6 +13,7 @@ import { AuthGuard } from '../app/guards/auth.guard';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
+import { PopoverModule } from 'ngx-bootstrap';
 
 // galery
 
@@ -42,6 +43,7 @@ import { ProductoComponent } from './component/producto/producto.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { PromocionesComponent } from './component/promociones/promociones.component';
 import { HeaderComponent } from './header/header.component';
+import { SelectorStickerModule } from './Stickers/selector-sticker/selector-sticker.module';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { HeaderComponent } from './header/header.component';
     FlashMessagesModule,
     // NgClass,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    ModalGalleryModule.forRoot()
+    ModalGalleryModule.forRoot(),
+    SelectorStickerModule,
+    PopoverModule.forRoot()
   ],
   providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]

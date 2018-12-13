@@ -7,6 +7,7 @@ cd  PoneleNombreV2
 
 --Instalación de dependencias-----
 npm i --save bootstrap popper.js jquery font-awesome bootswatch
+ng add ngx-bootstrap  --component popover
 npm i --save firebase angularfire2
 npm i --save rxjs-compat
 npm i --save angular2-flash-messages

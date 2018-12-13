@@ -30,6 +30,7 @@ export class LoginPageComponent implements OnInit {
       });
   }
 
+
   onClikGoogleLogin() {
     this.authService.loginGoogle()
       .then((res) => {
