@@ -11,6 +11,10 @@ ng add ngx-bootstrap  --component popover
 npm i --save firebase angularfire2
 npm i --save rxjs-compat
 npm i --save angular2-flash-messages
+npm i jspdf --save
+npm i html2canvas 
+npm install --save @types/jspdf
+npm install --save @types/html2canvas 
 
 ---galeria de imagenes-----
 npm i --save angular-modal-gallery

@@ -7,3 +7,9 @@
 .bordeRonded {
   border-radius: 15px;
 }
+
+.img3 {
+  background: url('https://www.stickerkid.es/media/icons/Adventure/astronaute1.png');
+  width: 50px;
+  height: 100px;
+}

@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-// declare var jQuery: any;
-// declare var $: any;
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
+import * as jspdf from 'jspdf';
+import * as html2canvas from 'html2canvas';
+
+// declare let jQuery: any;
+// declare let $: any;
 
 @Component({
   selector: 'app-select-font',
@@ -10,6 +13,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SelectFontComponent implements OnInit {
 
   @Input() img;
+
 
   colores: any[] = ['blue', 'AliceBlue', 'Azure', 'BlanchedAlmond', 'BurlyWood', 'Coral', 'Cyan', 'DarkGray',
     'DarkMagenta', 'DarkRed', 'DarkSlateGray', 'DeepPink', 'DodgerBlue', 'Fuchsia', 'Goldenrod', 'Grey',
@@ -72,6 +76,7 @@ export class SelectFontComponent implements OnInit {
   cantBody;
   coef = 0.56;
 
+
   constructor() { }
 
   ngOnInit() {
@@ -85,8 +90,8 @@ export class SelectFontComponent implements OnInit {
     this.fontFamily2 = this.listStyles[0];
 
 
-    this.fontSizeTitulo = 130;
-    this.fontSizeBody = 130;
+    this.fontSizeTitulo = 170;
+    this.fontSizeBody = 170;
 
     this.ancho = document.getElementById('sidebar').clientWidth;
     this.cantTile = 0;
@@ -101,14 +106,14 @@ export class SelectFontComponent implements OnInit {
   onKey(style: any) {
 
     this.CualculaCant(style);
-    var cal = 0;
-    var tam = 0;
+    let cal = 0;
+    let tam = 0;
     if (style == 'myStyles') {
       tam = this.fontSizeTitulo;
-      cal = (this.coef * tam) * (this.cantTile + 5);
+      cal = (this.coef * tam) * (this.cantTile + 3);
     } else if (style == 'myStyles2') {
       tam = this.fontSizeBody;
-      cal = (this.coef * tam) * (this.cantBody + 5);
+      cal = (this.coef * tam) * (this.cantBody + 3);
     }
     if (cal > this.ancho) {
       this.resta(style); this.onKey(style);
@@ -147,4 +152,65 @@ export class SelectFontComponent implements OnInit {
       this.cantBody = this.cuerpo.length;
     }
   }
+
+  public captureScreen() {
+    const data = document.getElementById('contentToConvert');
+    html2canvas(data).then(canvas => {
+      // Few necessary setting options
+      // let imgWidth = 208;
+      // let pageHeight = 295;
+
+      const imgWidth = 100;
+      const pageHeight = 50;
+      const imgHeight = canvas.height * imgWidth / canvas.width;
+      const heightLeft = imgHeight;
+
+      const contentDataURL = canvas.toDataURL('image/png');
+      const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+      const position = 10;
+      const columa1 = 3;
+      const columa2 = 107;
+      let i = 10;
+
+      for (i; i < 290; i = i + 40) {
+        pdf.addImage(contentDataURL, 'PNG', columa1, i, imgWidth, imgHeight);
+        pdf.addImage(contentDataURL, 'PNG', columa2, i, imgWidth, imgHeight);
+        // pdf.addImage('./assets/images/producto/Iconos-13.png', columa1, i, 34, 34);
+        // pdf.addImage('./assets/images/producto/Iconos-13.png', columa2, i, 34, 34);
+
+      }
+      pdf.save('MYPdf.pdf'); // Generated PDF
+    });
+  }
+
+  generarPDF() {
+    html2canvas(document.getElementById('contentToConvert'), {
+      // Opciones
+      allowTaint: true,
+      useCORS: false,
+      // Calidad del PDF
+      scale: 1
+    }).then(canvas => {
+      const imgWidth = 100;
+      const pageHeight = 50;
+      const imgHeight = canvas.height * imgWidth / canvas.width;
+      const heightLeft = imgHeight;
+
+      const contentDataURL = canvas.toDataURL('image/png');
+      const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+      const position = 10;
+      const columa1 = 3;
+      const columa2 = 107;
+      let i = 10;
+
+      for (i; i < 290; i = i + 40) {
+        pdf.addImage(contentDataURL, 'PNG', columa1, i, imgWidth, imgHeight);
+        pdf.addImage(contentDataURL, 'PNG', columa2, i, imgWidth, imgHeight);
+      }
+      pdf.save('MYPdf.pdf'); // Generated PDF
+    });
+  }
+
 }
+
+

@@ -46,7 +46,11 @@ export class SelectImageComponent implements OnInit {
   }
 
   setImagen(item: any) {
-    this.img = item;
+    // this.img = item;
+    this.img = './assets/images/producto/Iconos-13.png';
   }
+
+
+
 
 }
